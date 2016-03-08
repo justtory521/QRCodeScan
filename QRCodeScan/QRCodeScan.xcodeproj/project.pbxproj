@@ -17,6 +17,7 @@
 		0E5A3C701C8BCC8D001771E8 /* QRCodeScanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C6F1C8BCC8D001771E8 /* QRCodeScanUITests.m */; };
 		0E5A3C7F1C8BCCCA001771E8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C7E1C8BCCCA001771E8 /* QRCodeViewController.m */; };
 		0E5A3C821C8C8F73001771E8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C811C8C8F73001771E8 /* UIView+Extension.m */; };
+		AE7CE5481C8ECE5500194074 /* screenShot.PNG in Resources */ = {isa = PBXBuildFile; fileRef = AE7CE5471C8ECE5500194074 /* screenShot.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0E5A3C7E1C8BCCCA001771E8 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		0E5A3C801C8C8F73001771E8 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		0E5A3C811C8C8F73001771E8 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		AE7CE5471C8ECE5500194074 /* screenShot.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenShot.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				0E5A3C561C8BCC8D001771E8 /* Assets.xcassets */,
 				0E5A3C581C8BCC8D001771E8 /* LaunchScreen.storyboard */,
 				0E5A3C5B1C8BCC8D001771E8 /* Info.plist */,
+				AE7CE5471C8ECE5500194074 /* screenShot.PNG */,
 				0E5A3C4A1C8BCC8D001771E8 /* Supporting Files */,
 			);
 			path = QRCodeScan;
@@ -256,6 +259,7 @@
 				0E5A3C5A1C8BCC8D001771E8 /* LaunchScreen.storyboard in Resources */,
 				0E5A3C571C8BCC8D001771E8 /* Assets.xcassets in Resources */,
 				0E5A3C551C8BCC8D001771E8 /* Main.storyboard in Resources */,
+				AE7CE5481C8ECE5500194074 /* screenShot.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
