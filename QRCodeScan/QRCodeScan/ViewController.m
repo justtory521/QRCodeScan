@@ -36,7 +36,7 @@
  *  打开扫描界面
  */
 - (void)scanBtnClick {
-    UIStoryboard * mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard * mainStoryBoard = [UIStoryboard storyboardWithName:@"QRCode" bundle:nil];
     UIViewController * vc = mainStoryBoard.instantiateInitialViewController;
     [self presentViewController:vc animated:YES completion:nil];
 }
