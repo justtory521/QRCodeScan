@@ -1,3 +1,3 @@
 # QRCodeScan
 QRCodeScan
-![](QRCodeScan/QRCodeScan/QRCodeScan/Assets.xcassets/QRCode/screenShot.imageset/screenShot.PNG)  
+![](http://www.baidu.com/img/bdlogo.gif)  
