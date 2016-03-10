@@ -9,6 +9,7 @@
 #import "QRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "UIView+Extension.h"
+#import "SacnAreaStatusView.h"
 
 @interface QRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate, UITabBarDelegate>
 /**  容器视图*/
@@ -31,6 +32,8 @@
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer * previewLayer;
 /**  二维码绘制图层*/
 @property (strong, nonatomic) CALayer * drawLayer;
+
+@property (strong, nonatomic) SacnAreaStatusView * scanAreaView;
 @end
 
 @implementation QRCodeViewController
@@ -76,6 +79,15 @@
     return _drawLayer;
 }
 
+- (SacnAreaStatusView *)scanAreaView{
+    if (!_scanAreaView) {
+        _scanAreaView = [[SacnAreaStatusView alloc] init];
+        _scanAreaView.frame = self.view.bounds;
+        [self.view insertSubview:_scanAreaView atIndex:1];
+    }
+    return _scanAreaView;
+}
+
 #pragma mark - Life Cycle Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -93,6 +105,9 @@
     
     // 2.开始扫描
     [self startScan];
+    
+    // 3.扫描区域高度
+    [self setScanAreaHighlighted:false];
 }
 
 #pragma mark - Private Methods
@@ -165,6 +180,22 @@
     CGFloat height = self.containerView.width / self.view.width;
     self.output.rectOfInterest = CGRectMake(x, y, width, height);
 }
+
+/** 扫描区域高亮 */
+- (void)setScanAreaHighlighted:(BOOL)type{
+    CGPoint center = self.view.center;
+    CGFloat width = self.containerView.width - 10;
+    CGFloat x = center.x - width / 2.0;
+    
+    if (type) {
+        CGFloat y = center.y - width / 4.0;
+        self.scanAreaView.centerRect = CGRectMake(x, y, width, width / 2.0);
+    }else{
+        CGFloat y = center.y - width / 2.0;
+        self.scanAreaView.centerRect = CGRectMake(x, y, width, width);
+    }
+}
+
 
 /** 绘制图层 */
 - (void)drawCorners:(AVMetadataMachineReadableCodeObject *)codeObject{
@@ -241,6 +272,7 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     self.containerHeightCons.constant = self.scanLineView.width * (item.tag == 1 ? 0.5 : 1);
     [self setupPreviewLayer:item.tag == 1 ? 0.5 : 1.0];
+    [self setScanAreaHighlighted:item.tag];
     [self startAnimation];
 }
 @end
