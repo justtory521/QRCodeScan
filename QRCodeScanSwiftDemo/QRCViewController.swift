@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ScanQRCode
 
 protocol QRCViewControllerDelegate:NSObjectProtocol {
     func didFinishedSacn(controller:QRCViewController, result:String)
@@ -19,6 +20,8 @@ class QRCViewController: UIViewController {
     @IBOutlet weak var scanLineTopConstrint: NSLayoutConstraint!
     
     @IBOutlet weak var desLb: UILabel!
+    
+    @IBOutlet weak var borderView: BorderView!
     
     var delegate:QRCViewControllerDelegate?
     
@@ -34,6 +37,8 @@ class QRCViewController: UIViewController {
         scanView = ScanView(frame: UIScreen.main.bounds)
         scanView?.delegate = self
         view.insertSubview(scanView!, at: 0)
+        
+        borderView.anglecolor = .red
     }
     
     override func viewDidLayoutSubviews() {

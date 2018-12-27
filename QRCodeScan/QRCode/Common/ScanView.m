@@ -11,13 +11,15 @@
 #import "ScanAreaStatusView.h"
 #import "UIView+Extension.h"
 
-@interface ScanView()<AVCaptureMetadataOutputObjectsDelegate>
+@interface ScanView()<AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 /**  会话*/
 @property (strong, nonatomic) AVCaptureSession * session;
 /**  输入设备*/
 @property (strong, nonatomic) AVCaptureDeviceInput * deviceInput;
 /**  输出对象*/
 @property (strong, nonatomic) AVCaptureMetadataOutput * output;
+
+@property (strong, nonatomic) AVCaptureVideoDataOutput * videoDataOutput;
 /**  预览图层*/
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer * previewLayer;
 /**  二维码绘制图层*/
@@ -60,6 +62,15 @@
     return _output;
 }
 
+- (AVCaptureVideoDataOutput *)videoDataOutput{
+    if (!_videoDataOutput) {
+        _videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+        // 设置代理AVCaptureVideoDataOutputSampleBufferDelegate用于捕获环境光的变化
+        [_videoDataOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
+    }
+    return _videoDataOutput;
+}
+
 - (AVCaptureVideoPreviewLayer *)previewLayer{
     if (!_previewLayer) {
         _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
@@ -97,6 +108,13 @@
     // 2.判断是否能够将输出对象添加到会话中
     if (![self.session canAddOutput:self.output]) {
         return;
+    }
+    
+    // 2.1 同2用于光传感器
+    if ([self.session canAddOutput:self.videoDataOutput]) {
+        [self.session addOutput:self.videoDataOutput];
+        // 设置为高质量采集率
+        [_session setSessionPreset:AVCaptureSessionPresetHigh];
     }
     
     // 3.将输入设备和输出对象添加到会话中
@@ -214,7 +232,7 @@
     
     // 2.2移动到第一个点
     // 从corners数组中取出第0个元素，将这个字典中x/y赋值给point
-    CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)codeObject.corners[index++], &point);
+    CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)codeObject.corners[index], &point);
     [path moveToPoint:point];
     // 2.3 移动到其他的点
     while (index < codeObject.corners.count) {
@@ -263,5 +281,49 @@
             }
         }
     }
+}
+
+#pragma mark- AVCaptureVideoDataOutputSampleBufferDelegate的方法
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+    
+    CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL,sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+    NSDictionary *metadata = [[NSMutableDictionary alloc] initWithDictionary:(__bridge NSDictionary*)metadataDict];
+    CFRelease(metadataDict);
+    NSDictionary *exifMetadata = [[metadata objectForKey:(NSString *)kCGImagePropertyExifDictionary] mutableCopy];
+    float brightnessValue = [[exifMetadata objectForKey:(NSString *)kCGImagePropertyExifBrightnessValue] floatValue];
+    
+//    NSLog(@"环境光感 ： %f",brightnessValue);
+    
+    // 根据brightnessValue的值来打开和关闭闪光灯
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    BOOL result = [device hasTorch];// 判断设备是否有闪光灯
+    if ((brightnessValue < 0) && result) {// 打开闪光灯
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(lightSensorDidChange:show:)]) {
+            [_delegate lightSensorDidChange:self show:YES];
+        }
+        
+    }else if((brightnessValue > 0) && result) {// 关闭闪光灯
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(lightSensorDidChange:show:)]) {
+            [_delegate lightSensorDidChange:self show:NO];
+        }
+    }
+}
+
+#pragma mark - Ambient Light Sensor
+- (void)open{
+    // 根据brightnessValue的值来打开和关闭闪光灯
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    [device lockForConfiguration:nil];
+    [device setTorchMode: AVCaptureTorchModeOn];//开
+    [device unlockForConfiguration];
+}
+
+- (void)close{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    [device lockForConfiguration:nil];
+    [device setTorchMode: AVCaptureTorchModeOff];//关
+    [device unlockForConfiguration];
 }
 @end

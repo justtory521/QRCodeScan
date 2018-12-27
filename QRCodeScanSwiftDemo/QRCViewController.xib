@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCViewController" customModule="QRCodeScanSwiftDemo" customModuleProvider="target">
             <connections>
+                <outlet property="borderView" destination="y0E-nD-HzP" id="acO-va-cxo"/>
                 <outlet property="containerHconstraint" destination="iea-LH-ixQ" id="ekB-us-PTa"/>
                 <outlet property="desLb" destination="iFT-lR-Uhq" id="CJv-Qo-a9d"/>
                 <outlet property="scanLineTopConstrint" destination="d1U-aS-xaB" id="Plj-rR-WAK"/>
@@ -25,9 +26,6 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plr-Sf-5Pq">
                     <rect key="frame" x="83" y="258.5" width="209" height="150"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="扫描框" translatesAutoresizingMaskIntoConstraints="NO" id="27f-dX-xlq">
-                            <rect key="frame" x="0.0" y="0.0" width="209" height="150"/>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="扫描线" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-QA-VEY">
                             <rect key="frame" x="0.0" y="0.0" width="209" height="10"/>
                             <constraints>
@@ -37,15 +35,15 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="27f-dX-xlq" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="top" id="3Gj-HT-709"/>
-                        <constraint firstItem="27f-dX-xlq" firstAttribute="leading" secondItem="plr-Sf-5Pq" secondAttribute="leading" id="6kg-Wo-QpW"/>
                         <constraint firstItem="VI6-QA-VEY" firstAttribute="leading" secondItem="plr-Sf-5Pq" secondAttribute="leading" id="U7X-hl-Spd"/>
                         <constraint firstAttribute="trailing" secondItem="VI6-QA-VEY" secondAttribute="trailing" id="bnb-Ae-9Ek"/>
                         <constraint firstItem="VI6-QA-VEY" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="top" id="d1U-aS-xaB"/>
-                        <constraint firstAttribute="trailing" secondItem="27f-dX-xlq" secondAttribute="trailing" id="deJ-YT-EAb"/>
                         <constraint firstAttribute="height" constant="150" id="iea-LH-ixQ"/>
-                        <constraint firstAttribute="bottom" secondItem="27f-dX-xlq" secondAttribute="bottom" id="jOd-Ar-9ht"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0E-nD-HzP" customClass="BorderView">
+                    <rect key="frame" x="78" y="253.5" width="219" height="160"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放置在框内，即开始扫描" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-lR-Uhq">
                     <rect key="frame" x="20" y="428.5" width="335" height="14"/>
@@ -60,18 +58,21 @@
             <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="iFT-lR-Uhq" secondAttribute="trailing" constant="20" id="2dA-GH-QsT"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="top" constant="-5" id="7Is-Ns-1k9"/>
                 <constraint firstItem="iFT-lR-Uhq" firstAttribute="leading" secondItem="B9w-WJ-c4d" secondAttribute="leading" constant="20" id="AaA-ho-p3n"/>
                 <constraint firstItem="plr-Sf-5Pq" firstAttribute="centerY" secondItem="B9w-WJ-c4d" secondAttribute="centerY" id="aQ8-hK-t9L"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="bottom" secondItem="plr-Sf-5Pq" secondAttribute="bottom" constant="5" id="ajP-uH-Yp6"/>
                 <constraint firstAttribute="trailing" secondItem="plr-Sf-5Pq" secondAttribute="trailing" constant="83" id="egp-6p-R71"/>
                 <constraint firstItem="plr-Sf-5Pq" firstAttribute="leading" secondItem="B9w-WJ-c4d" secondAttribute="leading" constant="83" id="gCf-l7-BBv"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="leading" secondItem="plr-Sf-5Pq" secondAttribute="leading" constant="-5" id="hl9-yr-hfQ"/>
                 <constraint firstItem="iFT-lR-Uhq" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="bottom" constant="20" id="ypM-E1-a6p"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="trailing" secondItem="plr-Sf-5Pq" secondAttribute="trailing" constant="5" id="zuP-vY-0Ks"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="2a8-rV-oPD"/>
-            <point key="canvasLocation" x="2" y="48"/>
+            <point key="canvasLocation" x="-442" y="-51"/>
         </view>
     </objects>
     <resources>
-        <image name="扫描框" width="30.5" height="30.5"/>
         <image name="扫描线" width="170" height="3"/>
     </resources>
 </document>

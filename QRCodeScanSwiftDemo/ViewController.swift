@@ -22,7 +22,6 @@ class ViewController: UIViewController {
 
     @objc func scan(sender:UIButton){
         let vc = QRCViewController()
-        vc.isBarCode = true
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -17,21 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 设置导航栏外观
-    // 因为一旦设置全局有效，所以应该在程序一进来就设置
-    [UINavigationBar appearance].tintColor = [UIColor orangeColor];
-    [UITabBar appearance].tintColor = [UIColor orangeColor];
-    
-    // 1.创建UIWindow
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    // 2.设置根控制器
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    
-    // 3.显示Winodow
-    [self.window makeKeyAndVisible];
-    
-    
     return YES;
 }
 
@@ -51,6 +36,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:@"qrcStartAnimation" object:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

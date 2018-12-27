@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "QRCode/QRCodeVC.h"
-@interface ViewController ()<QRCodeVCDelegate>
-
+#import "BorderView.h"
+#import "AmbientLightSensor.h"
+#import "QRCode/QRCodeViewController.h"
+@interface ViewController ()<AmbientLightSensorDelegate>
+@property(nonatomic, strong) UIButton * lamp;
+@property(nonatomic, strong) AmbientLightSensor * lightSensor;
+@property(nonatomic, assign) BOOL isOpen;
 @end
 
 @implementation ViewController
@@ -17,7 +21,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    _isOpen = NO;
     [self creatScanBtn];
+//
+//    BorderView * borderV = [[BorderView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
+//    borderV.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:borderV];
+    
+//    _lightSensor = [[AmbientLightSensor alloc] initWithViewController:self];
+//    _lightSensor.frame = CGRectMake(50, 150, 100, 100);
+//    _lightSensor.backgroundColor = [UIColor grayColor];
+//    _lightSensor.delegate = self;
+//    [self.view addSubview:_lightSensor];
+//
+//    _lamp = [[UIButton alloc] initWithFrame:CGRectMake(50, 300, 100, 50)];
+//    _lamp.backgroundColor = [UIColor lightGrayColor];
+//    _lamp.hidden = YES;
+//    [_lamp setTitle:@"轻点照亮" forState:UIControlStateNormal];
+//    [_lamp addTarget:self action:@selector(openLamp:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:_lamp];
+    
+}
+
+- (void)openLamp:(UIButton *)sender{
+    sender.selected = !sender.selected;
+    sender.backgroundColor = sender.isSelected ? [UIColor redColor] : [UIColor lightGrayColor];
+    sender.hidden = !sender.selected;
+    _isOpen = sender.isSelected;
+    [sender setTitle:sender.isSelected ? @"轻点关闭" : @"轻点照亮" forState:UIControlStateNormal];
+    if (sender.isSelected) {
+        [_lightSensor open];
+    }else{
+        [_lightSensor close];
+    }
 }
 
 /**
@@ -31,6 +67,7 @@
     scanBtn.center = self.view.center;
     [scanBtn addTarget:self action:@selector(scanBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanBtn];
+    
 }
 
 /**
@@ -38,20 +75,18 @@
  */
 - (void)scanBtnClick {
     
-    QRCodeVC * vc = [[QRCodeVC alloc] init];
-    vc.delegate = self;
-    vc.isBarCode = YES;
-    [vc setScanBorderImage:[UIImage imageNamed:@"扫描框"] scanLineImage:[UIImage imageNamed:@"扫描线"]];
-    [self.navigationController pushViewController:vc animated:YES];
+    UIStoryboard * mainStoryBoard = [UIStoryboard storyboardWithName:@"QRCode" bundle:nil];
+    UIViewController * vc = mainStoryBoard.instantiateInitialViewController;
     
-//    UIStoryboard * mainStoryBoard = [UIStoryboard storyboardWithName:@"QRCode" bundle:nil];
-//    UIViewController * vc = mainStoryBoard.instantiateInitialViewController;
-//    [self presentViewController:vc animated:YES completion:nil];
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 
-#pragma mark - QRCodeVCDelegate
-- (void)didFinishedScan:(QRCodeVC *)controller result:(NSString *)result{
-    NSLog(@"---->:%@", result);
+#pragma mark - AmbientLightSensorDelegate
+- (void)ambientLightSensor:(AmbientLightSensor *)sensor show:(BOOL)flashLamp{
+    
+    if (!_isOpen) {
+        _lamp.hidden = !flashLamp;
+    }
 }
 @end

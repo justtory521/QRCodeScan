@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0424640D21D3730700450E47 /* MainTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640C21D3730700450E47 /* MainTableVC.m */; };
+		0424641021D45EAA00450E47 /* GenerateQRCodeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */; };
+		0424641321D4614500450E47 /* GenerateQRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424641221D4614500450E47 /* GenerateQRCVC.m */; };
+		04E056E521D089A7002C9792 /* BorderView.h in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; };
+		04E056E621D089A7002C9792 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FF21B7BA0D00DBF904 /* BorderView.m */; };
+		04E056ED21D0BDE8002C9792 /* ScanQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */; };
+		04E056EE21D0BDE8002C9792 /* ScanQRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04E056F021D0BE27002C9792 /* BorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E056F321D0C9FB002C9792 /* AmbientLightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */; };
+		0E29F50021B7BA0D00DBF904 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FF21B7BA0D00DBF904 /* BorderView.m */; };
 		0E5A3C4C1C8BCC8D001771E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C4B1C8BCC8D001771E8 /* main.m */; };
 		0E5A3C4F1C8BCC8D001771E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C4E1C8BCC8D001771E8 /* AppDelegate.m */; };
 		0E5A3C521C8BCC8D001771E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A3C511C8BCC8D001771E8 /* ViewController.m */; };
@@ -22,8 +32,6 @@
 		0E90C6DE21AF73B5002AFAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E90C6DC21AF73B5002AFAFD /* LaunchScreen.storyboard */; };
 		0E90C6E921AF73B6002AFAFD /* QRCodeScanSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C6E821AF73B6002AFAFD /* QRCodeScanSwiftDemoTests.swift */; };
 		0E90C6F421AF73B6002AFAFD /* QRCodeScanSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C6F321AF73B6002AFAFD /* QRCodeScanSwiftDemoUITests.swift */; };
-		0E90C70921AF7E0A002AFAFD /* ScanQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFEF06421AE69490061DF20 /* ScanQRCode.framework */; };
-		0E90C70A21AF7E0A002AFAFD /* ScanQRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFEF06421AE69490061DF20 /* ScanQRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E90C71021AF7E56002AFAFD /* QRCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C70E21AF7E56002AFAFD /* QRCViewController.swift */; };
 		0E90C71121AF7E56002AFAFD /* QRCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E90C70F21AF7E56002AFAFD /* QRCViewController.xib */; };
 		0EFEF05E21AE3B050061DF20 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEF05D21AE3B050061DF20 /* ScanView.m */; };
@@ -53,8 +61,6 @@
 		0EFEF0C921AE6E0B0061DF20 /* ScanView.h in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEF05C21AE3B050061DF20 /* ScanView.h */; };
 		0EFEF0CA21AE6E0B0061DF20 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEF05D21AE3B050061DF20 /* ScanView.m */; };
 		0EFEF0CE21AE7A500061DF20 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEF0CC21AE7A500061DF20 /* QRCodeViewController.m */; };
-		0EFEF0D321AE7AD50061DF20 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEF0D121AE7AD50061DF20 /* QRCodeVC.m */; };
-		0EFEF0D421AE7AD50061DF20 /* QRCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFEF0D221AE7AD50061DF20 /* QRCodeVC.xib */; };
 		AE7CE54B1C8EDB7F00194074 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7CE54A1C8EDB7F00194074 /* QRCode.storyboard */; };
 		AE7F00411C9125CC0004DF3D /* ScanAreaStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7F00401C9125CC0004DF3D /* ScanAreaStatusView.m */; };
 /* End PBXBuildFile section */
@@ -87,13 +93,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0E90C6D021AF73B4002AFAFD;
 			remoteInfo = QRCodeScanSwiftDemo;
-		};
-		0E90C70B21AF7E0A002AFAFD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E5A3C3F1C8BCC8D001771E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EFEF06321AE69490061DF20;
-			remoteInfo = ScanQRCode;
 		};
 		0EFEF06E21AE69490061DF20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -140,13 +139,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0E90C70D21AF7E0A002AFAFD /* Embed Frameworks */ = {
+		04E056EF21D0BDE9002C9792 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0E90C70A21AF7E0A002AFAFD /* ScanQRCode.framework in Embed Frameworks */,
+				04E056EE21D0BDE8002C9792 /* ScanQRCode.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +175,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0424640B21D3730700450E47 /* MainTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableVC.h; sourceTree = "<group>"; };
+		0424640C21D3730700450E47 /* MainTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableVC.m; sourceTree = "<group>"; };
+		0424640E21D45EAA00450E47 /* GenerateQRCodeBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateQRCodeBar.h; sourceTree = "<group>"; };
+		0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCodeBar.m; sourceTree = "<group>"; };
+		0424641121D4614500450E47 /* GenerateQRCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateQRCVC.h; sourceTree = "<group>"; };
+		0424641221D4614500450E47 /* GenerateQRCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCVC.m; sourceTree = "<group>"; };
+		04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScanQRCode.framework; path = Carthage/Build/iOS/ScanQRCode.framework; sourceTree = "<group>"; };
+		04E056F121D0C9FB002C9792 /* AmbientLightSensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbientLightSensor.h; sourceTree = "<group>"; };
+		04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbientLightSensor.m; sourceTree = "<group>"; };
+		0E29F4FE21B7BA0D00DBF904 /* BorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
+		0E29F4FF21B7BA0D00DBF904 /* BorderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderView.m; sourceTree = "<group>"; };
 		0E5A3C471C8BCC8D001771E8 /* QRCodeScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5A3C4B1C8BCC8D001771E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E5A3C4D1C8BCC8D001771E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -239,9 +249,6 @@
 		0EFEF0C121AE6C1F0061DF20 /* QRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanViewController.m; sourceTree = "<group>"; };
 		0EFEF0CB21AE7A500061DF20 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		0EFEF0CC21AE7A500061DF20 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
-		0EFEF0D021AE7AD50061DF20 /* QRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
-		0EFEF0D121AE7AD50061DF20 /* QRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
-		0EFEF0D221AE7AD50061DF20 /* QRCodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeVC.xib; sourceTree = "<group>"; };
 		AE7CE54A1C8EDB7F00194074 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		AE7F003F1C9125CC0004DF3D /* ScanAreaStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanAreaStatusView.h; sourceTree = "<group>"; };
 		AE7F00401C9125CC0004DF3D /* ScanAreaStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanAreaStatusView.m; sourceTree = "<group>"; };
@@ -274,7 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E90C70921AF7E0A002AFAFD /* ScanQRCode.framework in Frameworks */,
+				04E056ED21D0BDE8002C9792 /* ScanQRCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +346,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0424641421D4BCF300450E47 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AE7F003F1C9125CC0004DF3D /* ScanAreaStatusView.h */,
+				AE7F00401C9125CC0004DF3D /* ScanAreaStatusView.m */,
+				0EFEF05C21AE3B050061DF20 /* ScanView.h */,
+				0EFEF05D21AE3B050061DF20 /* ScanView.m */,
+				0E29F4FE21B7BA0D00DBF904 /* BorderView.h */,
+				0E29F4FF21B7BA0D00DBF904 /* BorderView.m */,
+				0424640E21D45EAA00450E47 /* GenerateQRCodeBar.h */,
+				0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */,
+				0E5A3C801C8C8F73001771E8 /* UIView+Extension.h */,
+				0E5A3C811C8C8F73001771E8 /* UIView+Extension.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		0E5A3C3E1C8BCC8D001771E8 = {
 			isa = PBXGroup;
 			children = (
+				04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */,
 				0E5A3C491C8BCC8D001771E8 /* QRCodeScan */,
 				0E5A3C631C8BCC8D001771E8 /* QRCodeScanTests */,
 				0E5A3C6E1C8BCC8D001771E8 /* QRCodeScanUITests */,
@@ -519,17 +544,15 @@
 			isa = PBXGroup;
 			children = (
 				AE7CE54A1C8EDB7F00194074 /* QRCode.storyboard */,
-				0E5A3C801C8C8F73001771E8 /* UIView+Extension.h */,
-				0E5A3C811C8C8F73001771E8 /* UIView+Extension.m */,
-				AE7F003F1C9125CC0004DF3D /* ScanAreaStatusView.h */,
-				AE7F00401C9125CC0004DF3D /* ScanAreaStatusView.m */,
+				0424641421D4BCF300450E47 /* Common */,
 				0EFEF0CB21AE7A500061DF20 /* QRCodeViewController.h */,
 				0EFEF0CC21AE7A500061DF20 /* QRCodeViewController.m */,
-				0EFEF0D021AE7AD50061DF20 /* QRCodeVC.h */,
-				0EFEF0D121AE7AD50061DF20 /* QRCodeVC.m */,
-				0EFEF0D221AE7AD50061DF20 /* QRCodeVC.xib */,
-				0EFEF05C21AE3B050061DF20 /* ScanView.h */,
-				0EFEF05D21AE3B050061DF20 /* ScanView.m */,
+				04E056F121D0C9FB002C9792 /* AmbientLightSensor.h */,
+				04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */,
+				0424640B21D3730700450E47 /* MainTableVC.h */,
+				0424640C21D3730700450E47 /* MainTableVC.m */,
+				0424641121D4614500450E47 /* GenerateQRCVC.h */,
+				0424641221D4614500450E47 /* GenerateQRCVC.m */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -541,6 +564,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E056F021D0BE27002C9792 /* BorderView.h in Headers */,
 				0EFEF08221AE6A270061DF20 /* ScanView.h in Headers */,
 				0EFEF07621AE69490061DF20 /* ScanQRCode.h in Headers */,
 				0EFEF08321AE6AAC0061DF20 /* ScanAreaStatusView.h in Headers */,
@@ -613,12 +637,11 @@
 				0E90C6CD21AF73B4002AFAFD /* Sources */,
 				0E90C6CE21AF73B4002AFAFD /* Frameworks */,
 				0E90C6CF21AF73B4002AFAFD /* Resources */,
-				0E90C70D21AF7E0A002AFAFD /* Embed Frameworks */,
+				04E056EF21D0BDE9002C9792 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0E90C70C21AF7E0A002AFAFD /* PBXTargetDependency */,
 			);
 			name = QRCodeScanSwiftDemo;
 			productName = QRCodeScanSwiftDemo;
@@ -875,7 +898,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EFEF0D421AE7AD50061DF20 /* QRCodeVC.xib in Resources */,
 				0E5A3C5A1C8BCC8D001771E8 /* LaunchScreen.storyboard in Resources */,
 				0E5A3C571C8BCC8D001771E8 /* Assets.xcassets in Resources */,
 				AE7CE54B1C8EDB7F00194074 /* QRCode.storyboard in Resources */,
@@ -973,11 +995,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E29F50021B7BA0D00DBF904 /* BorderView.m in Sources */,
+				04E056F321D0C9FB002C9792 /* AmbientLightSensor.m in Sources */,
+				0424640D21D3730700450E47 /* MainTableVC.m in Sources */,
 				0E5A3C821C8C8F73001771E8 /* UIView+Extension.m in Sources */,
+				0424641321D4614500450E47 /* GenerateQRCVC.m in Sources */,
+				0424641021D45EAA00450E47 /* GenerateQRCodeBar.m in Sources */,
 				0E5A3C521C8BCC8D001771E8 /* ViewController.m in Sources */,
 				0EFEF05E21AE3B050061DF20 /* ScanView.m in Sources */,
 				AE7F00411C9125CC0004DF3D /* ScanAreaStatusView.m in Sources */,
-				0EFEF0D321AE7AD50061DF20 /* QRCodeVC.m in Sources */,
 				0E5A3C4F1C8BCC8D001771E8 /* AppDelegate.m in Sources */,
 				0E5A3C4C1C8BCC8D001771E8 /* main.m in Sources */,
 				0EFEF0CE21AE7A500061DF20 /* QRCodeViewController.m in Sources */,
@@ -1043,6 +1069,8 @@
 				0EFEF0C821AE6E0B0061DF20 /* ScanAreaStatusView.m in Sources */,
 				0EFEF0C921AE6E0B0061DF20 /* ScanView.h in Sources */,
 				0EFEF0CA21AE6E0B0061DF20 /* ScanView.m in Sources */,
+				04E056E521D089A7002C9792 /* BorderView.h in Sources */,
+				04E056E621D089A7002C9792 /* BorderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1103,11 +1131,6 @@
 			isa = PBXTargetDependency;
 			target = 0E90C6D021AF73B4002AFAFD /* QRCodeScanSwiftDemo */;
 			targetProxy = 0E90C6F021AF73B6002AFAFD /* PBXContainerItemProxy */;
-		};
-		0E90C70C21AF7E0A002AFAFD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0EFEF06321AE69490061DF20 /* ScanQRCode */;
-			targetProxy = 0E90C70B21AF7E0A002AFAFD /* PBXContainerItemProxy */;
 		};
 		0EFEF06F21AE69490061DF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1371,6 +1394,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5RAQYULZ5E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = QRCodeScanSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1411,6 +1438,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5RAQYULZ5E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = QRCodeScanSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

@@ -10,6 +10,8 @@
 
 #import <ScanQRCode/ScanView.h>
 
+#import <ScanQRCode/BorderView.h>
+
 //! Project version number for ScanQRCode.
 FOUNDATION_EXPORT double ScanQRCodeVersionNumber;
 
