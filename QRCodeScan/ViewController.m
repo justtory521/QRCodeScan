@@ -10,6 +10,7 @@
 #import "BorderView.h"
 #import "AmbientLightSensor.h"
 #import "QRCode/QRCodeViewController.h"
+
 @interface ViewController ()<AmbientLightSensorDelegate>
 @property(nonatomic, strong) UIButton * lamp;
 @property(nonatomic, strong) AmbientLightSensor * lightSensor;

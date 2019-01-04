@@ -42,7 +42,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0E-nD-HzP" customClass="BorderView">
-                    <rect key="frame" x="78" y="253.5" width="219" height="160"/>
+                    <rect key="frame" x="83" y="258.5" width="209" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放置在框内，即开始扫描" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-lR-Uhq">
@@ -58,18 +58,18 @@
             <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="iFT-lR-Uhq" secondAttribute="trailing" constant="20" id="2dA-GH-QsT"/>
-                <constraint firstItem="y0E-nD-HzP" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="top" constant="-5" id="7Is-Ns-1k9"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="top" id="7Is-Ns-1k9"/>
                 <constraint firstItem="iFT-lR-Uhq" firstAttribute="leading" secondItem="B9w-WJ-c4d" secondAttribute="leading" constant="20" id="AaA-ho-p3n"/>
                 <constraint firstItem="plr-Sf-5Pq" firstAttribute="centerY" secondItem="B9w-WJ-c4d" secondAttribute="centerY" id="aQ8-hK-t9L"/>
-                <constraint firstItem="y0E-nD-HzP" firstAttribute="bottom" secondItem="plr-Sf-5Pq" secondAttribute="bottom" constant="5" id="ajP-uH-Yp6"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="bottom" secondItem="plr-Sf-5Pq" secondAttribute="bottom" id="ajP-uH-Yp6"/>
                 <constraint firstAttribute="trailing" secondItem="plr-Sf-5Pq" secondAttribute="trailing" constant="83" id="egp-6p-R71"/>
                 <constraint firstItem="plr-Sf-5Pq" firstAttribute="leading" secondItem="B9w-WJ-c4d" secondAttribute="leading" constant="83" id="gCf-l7-BBv"/>
-                <constraint firstItem="y0E-nD-HzP" firstAttribute="leading" secondItem="plr-Sf-5Pq" secondAttribute="leading" constant="-5" id="hl9-yr-hfQ"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="leading" secondItem="plr-Sf-5Pq" secondAttribute="leading" id="hl9-yr-hfQ"/>
                 <constraint firstItem="iFT-lR-Uhq" firstAttribute="top" secondItem="plr-Sf-5Pq" secondAttribute="bottom" constant="20" id="ypM-E1-a6p"/>
-                <constraint firstItem="y0E-nD-HzP" firstAttribute="trailing" secondItem="plr-Sf-5Pq" secondAttribute="trailing" constant="5" id="zuP-vY-0Ks"/>
+                <constraint firstItem="y0E-nD-HzP" firstAttribute="trailing" secondItem="plr-Sf-5Pq" secondAttribute="trailing" id="zuP-vY-0Ks"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="2a8-rV-oPD"/>
-            <point key="canvasLocation" x="-442" y="-51"/>
+            <point key="canvasLocation" x="-442.39999999999998" y="-51.724137931034484"/>
         </view>
     </objects>
     <resources>

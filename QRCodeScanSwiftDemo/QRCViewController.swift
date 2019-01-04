@@ -39,6 +39,7 @@ class QRCViewController: UIViewController {
         view.insertSubview(scanView!, at: 0)
         
         borderView.anglecolor = .red
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -78,6 +79,10 @@ class QRCViewController: UIViewController {
 }
 
 extension QRCViewController: ScanViewDelegate {
+    func lightSensorDidChange(_ scanView: ScanView, show flashLamp: Bool) {
+        
+    }
+    
     func typeDidChange(_ scanView: ScanView, rect: CGRect) {
         containerHconstraint.constant = rect.height
     }

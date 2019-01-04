@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400E9BB21DEF348002CA5FE /* GenerateQRCodeBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0424640E21D45EAA00450E47 /* GenerateQRCodeBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0400E9BD21DEF42D002CA5FE /* ScanQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0400E9BC21DEF42D002CA5FE /* ScanQRCode.framework */; };
+		0400E9BE21DEF42D002CA5FE /* ScanQRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0400E9BC21DEF42D002CA5FE /* ScanQRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0424640D21D3730700450E47 /* MainTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640C21D3730700450E47 /* MainTableVC.m */; };
 		0424641021D45EAA00450E47 /* GenerateQRCodeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */; };
 		0424641321D4614500450E47 /* GenerateQRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424641221D4614500450E47 /* GenerateQRCVC.m */; };
 		04E056E521D089A7002C9792 /* BorderView.h in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; };
 		04E056E621D089A7002C9792 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FF21B7BA0D00DBF904 /* BorderView.m */; };
-		04E056ED21D0BDE8002C9792 /* ScanQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */; };
-		04E056EE21D0BDE8002C9792 /* ScanQRCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04E056F021D0BE27002C9792 /* BorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E056F321D0C9FB002C9792 /* AmbientLightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */; };
 		0E29F50021B7BA0D00DBF904 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FF21B7BA0D00DBF904 /* BorderView.m */; };
@@ -145,7 +146,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04E056EE21D0BDE8002C9792 /* ScanQRCode.framework in Embed Frameworks */,
+				0400E9BE21DEF42D002CA5FE /* ScanQRCode.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,13 +176,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0400E9BC21DEF42D002CA5FE /* ScanQRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScanQRCode.framework; path = Carthage/Build/iOS/ScanQRCode.framework; sourceTree = "<group>"; };
 		0424640B21D3730700450E47 /* MainTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableVC.h; sourceTree = "<group>"; };
 		0424640C21D3730700450E47 /* MainTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableVC.m; sourceTree = "<group>"; };
 		0424640E21D45EAA00450E47 /* GenerateQRCodeBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateQRCodeBar.h; sourceTree = "<group>"; };
 		0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCodeBar.m; sourceTree = "<group>"; };
 		0424641121D4614500450E47 /* GenerateQRCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateQRCVC.h; sourceTree = "<group>"; };
 		0424641221D4614500450E47 /* GenerateQRCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCVC.m; sourceTree = "<group>"; };
-		04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScanQRCode.framework; path = Carthage/Build/iOS/ScanQRCode.framework; sourceTree = "<group>"; };
 		04E056F121D0C9FB002C9792 /* AmbientLightSensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbientLightSensor.h; sourceTree = "<group>"; };
 		04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbientLightSensor.m; sourceTree = "<group>"; };
 		0E29F4FE21B7BA0D00DBF904 /* BorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
@@ -281,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E056ED21D0BDE8002C9792 /* ScanQRCode.framework in Frameworks */,
+				0400E9BD21DEF42D002CA5FE /* ScanQRCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +367,7 @@
 		0E5A3C3E1C8BCC8D001771E8 = {
 			isa = PBXGroup;
 			children = (
-				04E056EC21D0BDE8002C9792 /* ScanQRCode.framework */,
+				0400E9BC21DEF42D002CA5FE /* ScanQRCode.framework */,
 				0E5A3C491C8BCC8D001771E8 /* QRCodeScan */,
 				0E5A3C631C8BCC8D001771E8 /* QRCodeScanTests */,
 				0E5A3C6E1C8BCC8D001771E8 /* QRCodeScanUITests */,
@@ -567,6 +568,7 @@
 				04E056F021D0BE27002C9792 /* BorderView.h in Headers */,
 				0EFEF08221AE6A270061DF20 /* ScanView.h in Headers */,
 				0EFEF07621AE69490061DF20 /* ScanQRCode.h in Headers */,
+				0400E9BB21DEF348002CA5FE /* GenerateQRCodeBar.h in Headers */,
 				0EFEF08321AE6AAC0061DF20 /* ScanAreaStatusView.h in Headers */,
 				0EFEF08421AE6AAE0061DF20 /* UIView+Extension.h in Headers */,
 			);
