@@ -149,7 +149,7 @@ qrcVC.angleColor = [UIColor colorWithRed:0.122 green:0.565 blue:0.902 alpha:1.00
 @end
 ```
 ## 效果
-<img src="https://github.com/youmyc/QRCodeScan/blob/master/Screenshot/Screenshot1.png" width = "640" height = "480" div align=center />
+<img src="https://github.com/youmyc/QRCodeScan/blob/master/Screenshot/Screenshot1.png" width = "640" height = "960" div align=center />
 
 ## Author
 
