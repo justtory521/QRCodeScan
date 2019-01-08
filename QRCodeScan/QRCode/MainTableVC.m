@@ -11,7 +11,7 @@
 #import "GenerateQRCVC.h"
 #import "QRCdiscern.h"
 
-@interface MainTableVC ()
+@interface MainTableVC ()<QRCdiscernDelegate>
 @property(strong, nonatomic) QRCdiscern * qrcDiscern;
 @end
 
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     _qrcDiscern = [[QRCdiscern alloc] init];
+    _qrcDiscern.delegate = self;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -66,6 +67,11 @@
     }
 }
 
+#pragma mark - QRCdiscernDelegate
+
+- (void)discernDidFinish:(QRCdiscern *)discern result:(NSString *)result{
+    NSLog(@"识别结果：%@", result);
+}
 
 
 

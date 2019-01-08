@@ -69,6 +69,10 @@
             
             title = @"扫描结果";
             msg = scannedResult;
+            
+            if (_delegate && [_delegate respondsToSelector:@selector(discernDidFinish:result:)]) {
+                [_delegate discernDidFinish:self result:scannedResult];
+            }
         }
         else{
             title = @"提示";
@@ -86,8 +90,6 @@
         [_viewController presentViewController:alertVC animated:YES completion:nil];
         
     }];
-    
-    
 }
 
 @end

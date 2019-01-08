@@ -12,6 +12,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenshotTool : UIView
+
+/**
+ 截图
+
+ @param view 所需截图的View
+ @return 截图后的图片
+ */
 + (UIImage *)screenShotWithView:(UIView *)view;
 @end
 
