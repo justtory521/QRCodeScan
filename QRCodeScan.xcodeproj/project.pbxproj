@@ -13,6 +13,8 @@
 		0424640D21D3730700450E47 /* MainTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640C21D3730700450E47 /* MainTableVC.m */; };
 		0424641021D45EAA00450E47 /* GenerateQRCodeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */; };
 		0424641321D4614500450E47 /* GenerateQRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424641221D4614500450E47 /* GenerateQRCVC.m */; };
+		0470957521E476CF003EB2B2 /* ScreenshotTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0470957421E476CF003EB2B2 /* ScreenshotTool.m */; };
+		0470957821E47E83003EB2B2 /* QRCdiscern.m in Sources */ = {isa = PBXBuildFile; fileRef = 0470957721E47E83003EB2B2 /* QRCdiscern.m */; };
 		04E056E521D089A7002C9792 /* BorderView.h in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; };
 		04E056E621D089A7002C9792 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29F4FF21B7BA0D00DBF904 /* BorderView.m */; };
 		04E056F021D0BE27002C9792 /* BorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E29F4FE21B7BA0D00DBF904 /* BorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -183,6 +185,10 @@
 		0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCodeBar.m; sourceTree = "<group>"; };
 		0424641121D4614500450E47 /* GenerateQRCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateQRCVC.h; sourceTree = "<group>"; };
 		0424641221D4614500450E47 /* GenerateQRCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateQRCVC.m; sourceTree = "<group>"; };
+		0470957321E476CF003EB2B2 /* ScreenshotTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotTool.h; sourceTree = "<group>"; };
+		0470957421E476CF003EB2B2 /* ScreenshotTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotTool.m; sourceTree = "<group>"; };
+		0470957621E47E83003EB2B2 /* QRCdiscern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCdiscern.h; sourceTree = "<group>"; };
+		0470957721E47E83003EB2B2 /* QRCdiscern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCdiscern.m; sourceTree = "<group>"; };
 		04E056F121D0C9FB002C9792 /* AmbientLightSensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbientLightSensor.h; sourceTree = "<group>"; };
 		04E056F221D0C9FB002C9792 /* AmbientLightSensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbientLightSensor.m; sourceTree = "<group>"; };
 		0E29F4FE21B7BA0D00DBF904 /* BorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
@@ -360,6 +366,10 @@
 				0424640F21D45EAA00450E47 /* GenerateQRCodeBar.m */,
 				0E5A3C801C8C8F73001771E8 /* UIView+Extension.h */,
 				0E5A3C811C8C8F73001771E8 /* UIView+Extension.m */,
+				0470957621E47E83003EB2B2 /* QRCdiscern.h */,
+				0470957721E47E83003EB2B2 /* QRCdiscern.m */,
+				0470957321E476CF003EB2B2 /* ScreenshotTool.h */,
+				0470957421E476CF003EB2B2 /* ScreenshotTool.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1001,6 +1011,7 @@
 				04E056F321D0C9FB002C9792 /* AmbientLightSensor.m in Sources */,
 				0424640D21D3730700450E47 /* MainTableVC.m in Sources */,
 				0E5A3C821C8C8F73001771E8 /* UIView+Extension.m in Sources */,
+				0470957521E476CF003EB2B2 /* ScreenshotTool.m in Sources */,
 				0424641321D4614500450E47 /* GenerateQRCVC.m in Sources */,
 				0424641021D45EAA00450E47 /* GenerateQRCodeBar.m in Sources */,
 				0E5A3C521C8BCC8D001771E8 /* ViewController.m in Sources */,
@@ -1009,6 +1020,7 @@
 				0E5A3C4F1C8BCC8D001771E8 /* AppDelegate.m in Sources */,
 				0E5A3C4C1C8BCC8D001771E8 /* main.m in Sources */,
 				0EFEF0CE21AE7A500061DF20 /* QRCodeViewController.m in Sources */,
+				0470957821E47E83003EB2B2 /* QRCdiscern.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

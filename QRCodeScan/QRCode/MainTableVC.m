@@ -9,9 +9,10 @@
 #import "MainTableVC.h"
 #import "QRCodeViewController.h"
 #import "GenerateQRCVC.h"
+#import "QRCdiscern.h"
 
 @interface MainTableVC ()
-
+@property(strong, nonatomic) QRCdiscern * qrcDiscern;
 @end
 
 @implementation MainTableVC
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _qrcDiscern = [[QRCdiscern alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -54,9 +56,17 @@
             [self.navigationController pushViewController:generateVC animated:YES];
         }
         break;
-        
+        case 3:
+        {
+            [_qrcDiscern openAlbum:self];
+        }
+        break;
         default:
         break;
     }
 }
+
+
+
+
 @end
