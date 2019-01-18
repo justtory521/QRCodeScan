@@ -150,7 +150,7 @@ qrcVC.angleColor = [UIColor colorWithRed:0.122 green:0.565 blue:0.902 alpha:1.00
 ```
 ## 效果
 ![](https://github.com/youmyc/QRCodeScan/blob/master/qrscan.gif)
-![](https://gitee.com/yom/QRCodeScan/blob/master/qrscan.gif)
+![](https://gitee.com/yom/QRCodeScan/raw/master/qrscan.gif)
 
 ## Author
 
