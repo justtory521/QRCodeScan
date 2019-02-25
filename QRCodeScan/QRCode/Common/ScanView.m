@@ -31,8 +31,8 @@
 
 @implementation ScanView
 
-- (instancetype)init{
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
     }
     return self;
 }
@@ -74,7 +74,8 @@
 - (AVCaptureVideoPreviewLayer *)previewLayer{
     if (!_previewLayer) {
         _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-        _previewLayer.frame = [UIScreen mainScreen].bounds;
+        _previewLayer.frame = self.bounds;
+        [_previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     }
     return _previewLayer;
 }

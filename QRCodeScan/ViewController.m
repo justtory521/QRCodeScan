@@ -24,6 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _isOpen = NO;
     [self creatScanBtn];
+    
 //
 //    BorderView * borderV = [[BorderView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
 //    borderV.backgroundColor = [UIColor grayColor];
